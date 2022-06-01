@@ -6,7 +6,7 @@ public class Avis {
 	
 	public Avis() {
 	}
-
+	
 	public Avis(String commentaire) {
 		this.commentaire = commentaire;
 	}
@@ -26,11 +26,5 @@ public class Avis {
 	public void setCommentaire(String commentaire) {
 		this.commentaire = commentaire;
 	}
-
-	@Override
-	public String toString() {
-		return "Avis [idAvis=" + idAvis + ", commentaire=" + commentaire + "]";
-	}
-	
 	
 }
