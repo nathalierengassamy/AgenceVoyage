@@ -12,6 +12,7 @@ public class Destination {
 	private Long idDestination;
 	private Long longitude;
 	private Long latitude;
+	private String pays;
 	@OneToMany(mappedBy = "dest")
 	private List<Hotel> hotels = new ArrayList<>();
 	
@@ -22,6 +23,14 @@ public class Destination {
 	public Destination(Long longitude, Long latitude, List<Hotel> hotels) {
 		this.longitude = longitude;
 		this.latitude = latitude;
+		this.hotels = hotels;
+	}
+	
+	public Destination(Long longitude, Long latitude, String pays, List<Hotel> hotels) {
+		super();
+		this.longitude = longitude;
+		this.latitude = latitude;
+		this.pays = pays;
 		this.hotels = hotels;
 	}
 
@@ -56,11 +65,19 @@ public class Destination {
 	public void setHotels(List<Hotel> hotels) {
 		this.hotels = hotels;
 	}
+	
+	public String getPays() {
+		return pays;
+	}
+
+	public void setPays(String pays) {
+		this.pays = pays;
+	}
 
 	@Override
 	public String toString() {
 		return "Destination [idDestination=" + idDestination + ", longitude=" + longitude + ", latitude=" + latitude
-				+ "]";
+				+ ", pays=" + pays + "]";
 	}
 	
 }
