@@ -15,7 +15,7 @@ public class Hotel {
 	private String nom;
 	private int nbEtoile;
 	private String elementAjoute;
-	private String elementAjoute2;
+	private String elementAjoute2bis;
 	@ManyToOne
 	@JoinColumn(name = "idDestination")
 	private Destination destination;
@@ -31,7 +31,7 @@ public class Hotel {
 		this.nom = nom;
 		this.nbEtoile = nbEtoile;
 		this.elementAjoute = elementAjoute;
-		this.elementAjoute2 = elementAjoute2;
+		this.elementAjoute2bis = elementAjoute2bis;
 		this.destination = destination;
 		this.reservations = reservations;
 	}
@@ -84,18 +84,18 @@ public class Hotel {
 		this.elementAjoute = elementAjoute;
 	}
 
-	public String getElementAjoute2() {
-		return elementAjoute2;
+	public String getElementAjoute2bis() {
+		return elementAjoute2bis;
 	}
 
-	public void setElementAjoute2(String elementAjoute2) {
-		this.elementAjoute2 = elementAjoute2;
+	public void setElementAjoute2bis(String elementAjoute2) {
+		this.elementAjoute2bis = elementAjoute2;
 	}
 
 	@Override
 	public String toString() {
 		return "Hotel [idHotel=" + idHotel + ", nom=" + nom + ", nbEtoile=" + nbEtoile + ", elementAjoute="
-				+ elementAjoute + ", elementAjoute2=" + elementAjoute2 + ", destination=" + destination
+				+ elementAjoute + ", elementAjoute2bis=" + elementAjoute2bis + ", destination=" + destination
 				+ ", reservations=" + reservations + "]";
 	}
 
